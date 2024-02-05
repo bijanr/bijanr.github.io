@@ -52,7 +52,7 @@ a{
 
 /* specific styling */
 .wallpaper{
-    background-image: url(../images/austria.jpg);
+    background-image: url("../images/austria.jpg");
     background-position: center;
     background-size: cover;
     opacity: 0.2;
@@ -195,6 +195,8 @@ a{
     
 }
 
+
+/* animations */
 .wallpaper,
 .picture-shadow,
 .picture-image,
@@ -209,11 +211,11 @@ a{
   animation-fill-mode: both;
 }
 
-.wallpaper,
+/* .wallpaper,
 .picture-shadow,
 .picture-image {
   opacity: 0;
-}
+} */
 
 .picture-shadow,
 .picture-image {
