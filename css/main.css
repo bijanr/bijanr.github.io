@@ -1,5 +1,6 @@
 /* styling the body */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 html{
     background-color: #5f45bb;
     background-image: linear-gradient(to bottom right, #180cac, #d054e4);
@@ -38,6 +39,17 @@ a{
     width: 100%;
     
 }
+
+.job, .button{
+    font-family: 'Montserrat', 'Quicksand', sans-serif;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+.button, .social a{
+    transform-origin: center;
+    transition-duration: 100ms;
+}
+
 /* specific styling */
 .wallpaper{
     background-image: url(../images/austria.jpg);
@@ -71,12 +83,63 @@ a{
     border-radius: 290486px;
     background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
     position: absolute;
-    top: 10px;
+    top: 20px;
 }
 .picture-image{
     border-radius: 290486px;
     position: absolute;
 }
+
+.name{
+    font-size: 2.25rem;
+    line-height: 1.125;
+    margin-bottom: 0.5rem;
+}
+
+.job{
+    color: #ffe479;
+    font-size: 0.75em;
+}
+.hr{
+    background-color: #ff470f;
+    border: none;
+    content: "";
+    height: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    transform-origin: center left;
+    width: 4rem;
+}
+.description{
+    font-size: 1.5rem;
+}
+.contact{
+    display: inline-block;
+    margin-top: 1.5rem;
+    vertical-align: top;
+}
+.button{
+    background-color: #fff;
+    border-radius: 290486px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: #9013fe;
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1;
+    padding: 1.25em 2em;
+    text-shadow: none;
+    transition-property: box-shadow, transform;
+    user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+}
+
+.button:hover{
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+    transform: scale(1.02) translateY(-2.5px);
+}
+
 
 /* responsiveness */
 @media screen and (max-width: 799px) {
