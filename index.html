@@ -7,17 +7,21 @@
     <title>Bijan Roy</title>
     <link rel="stylesheet" type="text/css" href="css/minireset.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <script defer type="text/javascript" src="js/main.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
 </head>
 <body>
-    <div class="wallpaper"></div>
+    <div id="wallpaper" class="wallpaper" data-image="images/austria.jpg"></div>
     <div class="content">
         <aside class="side">
-            <figure class="picture">
+            <figure id="picture" class="picture">
                 <div class="picture-shadow"></div>
                 <img id="pictureImage" class="picture-image" 
                     src="images/thorfinn.jpg"
-                    srcset="images/thorfinn.jpg 1x, images/thorfinn@2x.jpg 2x, images/thorfinn@3x.jpg 3x"
+                    srcset="images/thorfinn.jpg 1x,
+                            images/thorfinn@2x.jpg 2x,
+                            images/thorfinn@3x.jpg 3x"
                     alt="Portrait of Dharampal"
                     width="320"
                     height="320">

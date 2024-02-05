@@ -140,6 +140,45 @@ a{
     transform: scale(1.02) translateY(-2.5px);
 }
 
+.button:active{
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+    transform: scale(1.1 ) translateY(-1.5px);
+}
+
+.social{
+    display: flex;
+    margin-top: 1.5rem;
+    list-style: none;
+}
+
+.social li{
+    height: 2rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    width: 2rem;
+}
+
+.social a{
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    height: 2rem;
+    justify-content: center;
+    opacity: 0.5;
+    transition-property: opacity, transform;
+    width: 2rem;
+    will-change: opacity, transform;
+}
+
+.social a:hover{
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+.social a:active{
+    opacity: 1;
+    transform: scale(1.1);
+}
 
 /* responsiveness */
 @media screen and (max-width: 799px) {
@@ -156,26 +195,123 @@ a{
     
 }
 
-@media screen and (min-width: 800px) {
-    .content{
-        align-items: center;
-        justify-content: space-around;
-        justify-content: space-evenly;
-        padding: 4rem;
-    }
-    .side{
-        flex-grow: 0;
-        flex-shrink: 0;
-        height: 20rem;
-        margin-left: 4rem;
-        order: 2;
-        width: 20rem;
-    }
-
-    .about{
-        flex-grow: 1;
-        flex-shrink: 1;
-    }
-
-    
+.wallpaper,
+.picture-shadow,
+.picture-image,
+.name,
+.job,
+.hr,
+.description,
+.contact,
+.social li {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+  animation-fill-mode: both;
 }
+
+.wallpaper,
+.picture-shadow,
+.picture-image {
+  opacity: 0;
+}
+
+.picture-shadow,
+.picture-image {
+  animation-duration: 750ms;
+  animation-timing-function: cubic-bezier(0, 0.5, 0.25, 1.25);
+}
+
+.wallpaper {
+  animation-timing-function: ease-out;
+}
+
+.wallpaper.is-loaded {
+  animation-delay: 1s;
+  animation-name: zoomOut;
+}
+
+.picture.is-loaded,
+.picture-shadow {
+  animation-name: picShadow;
+}
+
+.picture.is-loaded,
+.picture-image {
+  animation-name: picImage;
+}
+
+.name {
+  animation-name: slideDown;
+}
+
+.job {
+  animation-name: slideUp;
+}
+
+.hr {
+  animation: fillUp;
+}
+
+.description {
+  animation-name: slideUp;
+}
+
+.contact {
+  animation-name: bounceIn;
+}
+
+.social li {
+  animation-duration: 500ms;
+  animation-name: slideUp;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+.name {
+  animation-delay: 100ms;
+}
+
+.job {
+  animation-delay: 200ms;
+}
+
+.hr {
+  animation-delay: 300ms;
+}
+
+.description {
+  animation-delay: 400ms;
+}
+
+.picture-image {
+  animation-delay: 500ms;
+}
+
+.picture-shadow {
+  animation-delay: 500ms;
+}
+
+.contact {
+  animation-delay: 600ms;
+}
+
+.social li:nth-child(1) {
+  animation-delay: 800ms;
+}
+
+.social li:nth-child(2) {
+  animation-delay: 900ms;
+}
+
+.social li:nth-child(3) {
+  animation-delay: 1000ms;
+}
+
+.social li:nth-child(4) {
+  animation-delay: 1100ms;
+}
+
+.social li:nth-child(5) {
+  animation-delay: 1200ms;
+}
+
+
