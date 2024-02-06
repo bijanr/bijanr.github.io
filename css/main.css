@@ -106,9 +106,9 @@ a{
     content: "";
     height: 1px;
     margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     transform-origin: center left;
-    width: 4rem;
+    width: 4.8rem;
 }
 .description{
     font-size: 1.5rem;
@@ -147,7 +147,9 @@ a{
 
 .social{
     display: flex;
+    transform-origin: right center;
     margin-top: 1.5rem;
+    margin-left: 1rem;
     list-style: none;
 }
 
@@ -194,6 +196,7 @@ a{
     }
     
 }
+
 @media screen and (min-width: 800px) {
   .content {
       align-items: center;
@@ -215,6 +218,7 @@ a{
     }
 }
 
+
 /* animations */
 .wallpaper,
 .picture-shadow,
@@ -230,11 +234,11 @@ a{
   animation-fill-mode: both;
 }
 
-/* .wallpaper,
+
 .picture-shadow,
 .picture-image {
   opacity: 0;
-} */
+}
 
 .picture-shadow,
 .picture-image {
@@ -243,7 +247,7 @@ a{
 }
 
 .wallpaper {
-  animation-timing-function: ease-out;
+  animation-timing-function: cubic-bezier(0, 0.8, 0.8,0.9);
 }
 
 .wallpaper.is-loaded {
@@ -334,5 +338,3 @@ a{
 .social li:nth-child(5) {
   animation-delay: 1200ms;
 }
-
-
